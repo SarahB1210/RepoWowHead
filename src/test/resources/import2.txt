@@ -1,0 +1,11 @@
+Objet2 
+Niveau d'objet 25
+Cuir
+Armure : 7
++7 [Agilité or Intelligence]
++10 Endurance
+Augmente votre score de
+coup critique de +6.
++3 Versatilité
+23 
+44

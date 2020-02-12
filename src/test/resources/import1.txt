@@ -1,0 +1,11 @@
+Objet1
+Niveau d'objet 25
+Tissu
+Armure : 3
++5 Intelligence
++8 Endurance
+Augmente votre score de
+hâte de +4.
++3 Versatilité
+16
+34

@@ -1,0 +1,14 @@
+Objet3
+Niveau d'objet 25
+Hache
+Dégâts : 11 - 23
++7 Force
++10 Endurance
+Augmente votre score de
+coup critique de +4.
+Augmente votre score de
+hâte de +5.
+"Peut aussi servir de pioche
+de mineur."
+42
+61

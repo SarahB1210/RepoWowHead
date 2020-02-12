@@ -1,0 +1,12 @@
+Objet4
+Niveau d'objet 25
+Mailles
+Armure : 10
++7 [Agilité or Intelligence]
++10 Endurance
+Augmente votre score de
+coup critique de +6.
+Augmente votre score de
+hâte de +4.
+22
+93
