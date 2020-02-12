@@ -2,6 +2,7 @@ package fr.Wowhead;
 import static org.junit.Assert.*;
 
 
+
 import java.awt.Desktop.Action;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -19,12 +20,19 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
 
+
 public class MesTests_Test {
-	WebDriver driver = new ChromeDriver();
+
+
+	private String BROWSER=System.getProperty("browser");
+	
+	WebDriver driver;
 
 	public List<String> loadFile(String filePath) throws FileNotFoundException {
 
@@ -48,6 +56,22 @@ public class MesTests_Test {
 
 	@Test
 	public void Test() throws InterruptedException, FileNotFoundException {
+
+		System.out.println("browser"+ BROWSER);
+		if(BROWSER.equals("chrome")) {
+
+			driver = new ChromeDriver();
+			
+		}
+		else if (BROWSER.equals("fireFox")) {
+			driver = new FirefoxDriver();
+			
+		} 
+		else if (BROWSER.equals("ie")) {
+			driver = new InternetExplorerDriver();
+			
+		}
+
 		driver.get("https://fr.wowhead.com/");
 		driver.manage().window().maximize();
 
@@ -74,21 +98,21 @@ public class MesTests_Test {
 			Thread.sleep(1000);
 
 			WebElement item_form = driver.findElement(By.xpath("//div[contains(@class,'wowhead-tooltip wowhead')]"));
-			
+
 
 			String item_array = item_form.getText();
 			//String[] item_array = item_form.getText().split("\n");
-			
+
 			String[] file_name = {"import1.txt","import2.txt","import3.txt","import4.txt","import5.txt"};
-			
+
 			List<String> item_list =  loadFile("src/test/resources/"+file_name[i-1]);
 
 
 			for(int j = 1; j < item_list.size(); j++) {
 
-					assertTrue(item_array.contains(item_list.get(j)));
-					
-				
+				assertTrue(item_array.contains(item_list.get(j)));
+
+
 			}
 
 		}
