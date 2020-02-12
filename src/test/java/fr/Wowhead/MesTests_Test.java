@@ -23,7 +23,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
 
-public class MesTests {
+public class MesTests_Test {
 	WebDriver driver = new ChromeDriver();
 
 	public List<String> loadFile(String filePath) throws FileNotFoundException {
